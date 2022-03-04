@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import api from '../../services/api'
 import Post from "../Post"
+import Header from '../Header'
 import './ListagemPosts.css'
 
 const ListagemPosts = () => {
@@ -14,7 +15,9 @@ const ListagemPosts = () => {
   }, [])
 
   return(
-    <main>
+    <>
+      <Header />
+      <main>
       {
         posts.map((post) => 
           <Post 
@@ -27,6 +30,7 @@ const ListagemPosts = () => {
         )
       }
     </main>
+    </>
   )
 }
 
